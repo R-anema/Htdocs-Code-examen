@@ -1,0 +1,19 @@
+html {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    font-size: large;
+    color:darkolivegreen;
+}
+
+header {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    position: inherit;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffff00 %0, #fffff0 %100);
+    background-repeat: no-repeat;
+}

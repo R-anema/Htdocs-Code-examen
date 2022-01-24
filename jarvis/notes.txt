@@ -1,0 +1,175 @@
+
+        $dsn = "mysql: host=$host;dbname$dbname=$dbname;charset$charset";
+        $dsn = "mysql: host=" . $this->host.";database_name=" . $this->database_name . ";charset=".$this->$charset" . ;
+        $pdo = new PDO($dsn, $this->$username, $this->$password);
+        return $pdo;
+        $db = mysql_connect('localhost', 'root', '', 'signup');
+
+/*
+$sql = "UPDATE users SET name=?, surname=?, sex=? WHERE id=?";
+$stmt= $pdo->prepare($sql);
+$stmt->execute([$name, $surname, $sex, $id]);
+//$sql = "UPDATE films SET filmtitel=?, filmduur=?, fildatum=?, filmuitkomst=?, filmomschrijving+? WHERE id=?";
+UPDATE films 
+SET <input type="text">
+WHERE
+
+//informatie in een fomulier. 
+*/
+
+private $host;
+private $username;
+private $password;
+private $dbname;
+private $charset;
+
+echo mysqli_get_client_info();
+
+$sth = $host->prepare("SELECT * FROM series");
+$sth->execute();
+/* Fetch all of the values of the first column */
+$result = $sth->fetchAll(PDO::FETCH_COLUMN, 0);
+var_dump($result);
+
+$titles = $pdo->query('SELECT * FROM series')->fetchAll(PDO::FETCH_CLASS, 'Titles');
+
+$sth = $host->prepare("SELECT * FROM series");
+$sth->execute();
+SELECT filmtitel, filmduur FROM films;
+
+$titles = ;
+
+--
+
+$host;
+$username;
+$password;
+$dbname;
+$charset;
+
+function connect($host, $username, $password, $dbname, $charset)
+{
+    $this->$host = "localhost";
+    $this->$username = "root";
+    $this->$password = "";
+    $this->$dbname = "netland";
+    $this->$charset = "utf8mb4";
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+
+    try {
+        $pdo = new PDO($dsn, $user, $pass, $options);
+    } catch (\PDOException $e) {
+        throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    }
+}
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+  } else {
+    echo "0 results";
+  }
+  $conn->close();
+
+  $sorterting = $pdo->query('SELECT * FROM films ORDER BY rating');
+
+
+  $sql = 'SELECT volgnummer, filmtitel, filmduur, filmdatum, filmuitkomst, filmomschrijving, trailerid FROM films';
+foreach  ($conn->query($sql) as $row) {
+    print $row['volgnummer'] . "\t";
+    print $row['filmtitel'] . "\t";
+    print $row['filmduur'] . "\n";
+    print $row['filmdatum'] . "\t";
+    print $row['filmuitkomst'] . "\t";
+    print $row['filmomschrijving'] . "\t";
+    print $row['trailerid'] . "\t";
+}
+
+
+echo $_GET["filtitel"];
+
+$filmsid = $pdo->query('SELECT * FROM series');
+$seriesid = $pdo->query('SELECT * FROM films');
+
+foreach ($filmsid as $rowd) {
+    echo "<tr>";
+    echo "<td>" . $rowd['filmsid'] . "</td>";
+}
+
+foreach ($seriesid as $rowe) {
+    echo "<tr>";
+    echo "<td>" . $rowe['seriesid'] . "</td>";
+}
+
+$seriesid = $pdo->query('SELECT * FROM films');
+foreach ($filmsid as $rowd) {
+    echo "<tr>";
+    echo "<td>" . $rowd['filmsid'] . "</td>";
+}
+
+$stmt = $pdo->query('SELECT volgnummer FROM films');
+$films = $stmt->fetchAll(PDO::FETCH_COLUMN);
+$selectie = $pdo->query('SELECT * FROM films');
+$selectie->execute();
+
+<form method ="post" action ="">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+  <input type="button" id="button">
+</form>
+
+//Zet Details erin die leid naar edit en insert.
+while ($row = $stmt->fetch()) {
+    echo $row['title'];
+    echo $rowb['duur'];
+    echo '<a href="edit.php">Click here</a>';
+    echo '<a href="insert.php"Click here</a>';
+}
+
+echo "<th>Lengte</th>";
+
+if(isset)($_POST['update']) {
+    $gebruikerid = $POST['gebruikers_id'];
+    $username = $POST['username'];
+    $wachtwoord = $POST['wachtwoord'];
+
+    $pdoquery = "update gebruikers set username=:username, wachtwoord=:wachtwoord, wachtwoord=:wachtwoord";
+    $pdoquery_run = $pdoquery->prepare($pdoquery);
+    $pdoquery_exec = $pdoquery_run->execute(array())
+}
+
+//login
+//$user = $db->get_user($_GET['user_id']);
+?>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+		<th>Rol</th>
+		<th>Gebruikersnaam</th>
+		<th>Email</th>
+		<th colspan="2">Beheer</th>
+      </tr>
+    </thead>
+    <tbody>
+		<?php foreach ($users as $entry) { ?>
+		<tr>
+			<td><?= $entry['type'] ?></td>
+			<td><a href="../users/edit.php?user_id=<?= $entry['id'] ?>">Bewerken</a></td>
+			<td><a href="../users/delete_user.php?user_id=<?= $entry['id'] ?>">Verwijderen</a></td>
+		</tr>
+		<?php } //endforeach ?>
+	</tbody>
+</table>
+
+
+<td><a href="../jarvis/edit.php?user_id=<?= $entry['id'] ?>">Bewerken</a></td>

@@ -1,0 +1,35 @@
+Summary:
+De eigenaar(beheerder) moet kunnen inloggen, uitloggen en wachtwoord kunnen wijzigen.
+Meerdere magazijnen kunnen worden aangemaakt, wijzigen en verwijderen.
+Ze willen dat de applicatie aangeeft welke en hoeveel bloemen er in een magezijn liggen.
+ Er moet een allarm verschijnen wanneer die bijna op zijn.
+ Ook moeten ze nieuwe bloemen kunnen toevoegen, wijzigen en verwijderen uit bloemen en magazijnen tabellen.
+
+
+Database ontwerp:
+
+Bloemen (Naam, afbeelding, wetenschappelijke naam, aantal, prijs)
+Medewerkers (Met Admin voor beheerder. Kan een parameter zijn in de index, null of not null dat word bekeken zoals namen en login)
+Magazijnen (per magazijn zien hoeveel bloemen erin liggen)
+
+Homepage:
+Flower Inc - navigatie bar voor de Bootstrap en Tailwind.
+
+Overzicht:
+Inner Join moet erin.
+
+Readme:
+Installeer Xampp for PHP en activeer Apache en Mysql.
+Open Localhost paneel voor Mysql.
+Gebruik de database.sql.
+
+
+login
+Wachtwoord functie opslaan met een hash. Je moet een methode gebruiken om de methode te verifieren.
+Je logt in en checkt of het watchwoord en username kloppen. Je start een sessie die tijdelijke sessie word opgeslagen in de server.
+Je geeft hetzelfde token door om het te checken.
+
+
+Inner Join op de overzicht pagina (index/home)
+Legenda naar wijzigen, toevoegen en bewerken van gegevens.
+Login op de overzicht pagina wanneer je daar terechtkomt. Admin moet 1 hebben. (null)
